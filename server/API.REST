@@ -1,0 +1,62 @@
+### USER REGISTRATION
+POST http://127.0.0.1:3080/api/register
+Content-Type: application/json
+
+{
+  "name": "Mostakim Billah",
+  "gender": "Male",
+  "email": "mostakim@gmail.com",
+  "phone": "01701010101",
+  "password": "1234abcd",
+  "dob": "1992-10-10",
+  "role": "user"
+}
+
+### RIDER REGISTRATION
+POST http://127.0.0.1:3080/api/register
+Content-Type: application/json
+
+{
+  "name": "Mubasshir Kabir",
+  "gender": "Male",
+  "email": "mubasshir@gmail.com",
+  "phone": "01701010102",
+  "password": "1234abcd",
+  "dob": "1992-10-10",
+  "role": "rider"
+}
+
+### CREATE RIDE
+POST http://127.0.0.1:3080/api/create-ride
+Content-Type: application/json
+
+{
+  "from_location": "Uttara",
+  "to_location": "Gulshan",
+  "event_date": "2021-07-12",
+  "event_time": "2021-07-12 15:28:47",
+  "price": 222,
+  "additional_msg": "",
+  "rider_id": 8
+}
+
+### GET ALL RIDES
+GET http://127.0.0.1:3080/api/get-all-ride
+
+### GET RIDE BY ID
+POST http://127.0.0.1:3080/api/get-ride
+Content-Type: application/json
+
+{
+  "ride_id": 3
+}
+
+### MAKE BID
+POST http://127.0.0.1:3080/api/MAKE-BID
+Content-Type: application/json
+
+{
+  "bidder_id": 7,
+  "ride_id": 3,
+  "bid_message": "I will be there at 11am."
+}
